@@ -1,13 +1,13 @@
 const names = [
-    "avant droite",
-    "arrière gauche",
-    "arrière droite",
+    "front right",
+    "rear left",
+    "rear right",
 ];
 
 const names2 = [
-    "avant droit",
-    "arrière gauche",
-    "arrière droite",
+    "front right",
+    "rear left",
+    "rear right",
 ];
 
 HelpText = function(msg)
@@ -55,13 +55,13 @@ setTick(() => {
             if (Vdist2(pco[0], pco[1], pco[2], coord[0], coord[1], coord[2]) < 0.75 && !DoesEntityExist(GetPedInVehicleSeat(veh, i - 1)) && GetVehicleDoorLockStatus(veh) !== 2)
             {
                 if (names[i - 1] && !IsThisModelABike(GetEntityModel(veh)) && !IsThisModelABoat(GetEntityModel(veh)))
-                    HelpText("Appuyez sur ~INPUT_CONTEXT~ pour rentrer par la porte " + names[i - 1]);
+                    HelpText("Press ~ INPUT_CONTEXT ~ to enter through the door" + names[i - 1]);
                 else if (names2[i - 1] && IsThisModelABike(GetEntityModel(veh)) && IsThisModelABoat(GetEntityModel(veh)))
-                    HelpText("Appuyez sur ~INPUT_CONTEXT~ pour rentrer sur le siège " + names2[i - 1]);
+                    HelpText("Press ~INPUT_CONTEXT~ to return to your seat" + names2[i - 1]);
                 else
-                    HelpText("Appuyez sur ~INPUT_CONTEXT~ pour rentrer par cette porte");
+                    HelpText("Press ~INPUT_CONTEXT~ to enter through this door");
 
-                if (IsControlJustPressed(1, 38))
+                if (IsControlJustPressed(1, 74))
                 {
                     TaskEnterVehicle(ped, veh, 10000, i - 1, 1.0, 1, 0);
                 }
