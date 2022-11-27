@@ -54,14 +54,7 @@ setTick(() => {
 
             if (Vdist2(pco[0], pco[1], pco[2], coord[0], coord[1], coord[2]) < 0.75 && !DoesEntityExist(GetPedInVehicleSeat(veh, i - 1)) && GetVehicleDoorLockStatus(veh) !== 2)
             {
-                if (names[i - 1] && !IsThisModelABike(GetEntityModel(veh)) && !IsThisModelABoat(GetEntityModel(veh)))
-                    HelpText("Press H to enter through the" + names[i - 1]);
-                else if (names2[i - 1] && IsThisModelABike(GetEntityModel(veh)) && IsThisModelABoat(GetEntityModel(veh)))
-                    HelpText("Press H to return to your seat" + names2[i - 1]);
-                else
-                    HelpText("Press H to enter through this door");
-
-                if (IsControlJustPressed(1, 74))
+                if (IsControlJustPressed(1, 49))
                 {
                     TaskEnterVehicle(ped, veh, 10000, i - 1, 1.0, 1, 0);
                 }
