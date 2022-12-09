@@ -8,6 +8,6 @@ just stand next to the door you want to enter and press F
 
 SCRIPT ORIGINALLY CREATED BY ZAUB1 **THIS IS JUST A TRANSLATION/SLIGHT REWORK**
 
-photo below is of the original(that one is still with an message in french)
+video below on how it works
 
-![screenshot](https://i.imgur.com/jyRBDJy.jpg)
+[![video click here](https://i.imgur.com/zwB0cDU.png)](https://www.youtube.com/watch?v=Hc79sDi3f0U)
